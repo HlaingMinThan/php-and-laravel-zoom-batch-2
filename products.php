@@ -21,17 +21,17 @@ $owner = 'admin';
 
     <h1><?= $title; ?></h1>
 
-    <ul>
-        <?php foreach ($products as $product) : ?>
-            <?php if ($owner === 'admin') : ?>
+    <?php if ($owner === 'admin') : ?>
+        <ul>
+            <?php foreach ($products as $product) : ?>
                 <li>
                     <span>
                         <?= $product; ?>
                     </span>
                 </li>
-            <?php endif; ?>
-        <?php endforeach; ?>
-    </ul>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
 </body>
 
 </html>
