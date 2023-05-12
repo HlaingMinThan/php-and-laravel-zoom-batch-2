@@ -89,17 +89,17 @@ $age = 20;
 //     echo 'loser';
 // }
 
-$name = "zaw zaw";
-switch ($name) {
-    case "aung aung":
-        echo "hello aung aung";
-        break;
-    case "zaw zaw":
-        echo "hello zaw zaw";
-        break;
-    default:
-        echo "nobody";
-}
+// $name = "zaw zaw";
+// switch ($name) {
+//     case "aung aung":
+//         echo "hello aung aung";
+//         break;
+//     case "zaw zaw":
+//         echo "hello zaw zaw";
+//         break;
+//     default:
+//         echo "nobody";
+// }
 
 
 // if ($name === "aungaung") {
@@ -107,3 +107,84 @@ switch ($name) {
 // } else if ($name === "zaw zaw") {
 //     echo "hello zaw zaw";
 // }
+
+
+//function declaration/statement
+// function drive($carName) // parameter
+// {
+//     echo 'key<br>';
+//     echo 'engine start<br>';
+//     echo 'vision<br>';
+//     echo $carName . ' is driving<br>';
+// }
+
+//function expression or anonymous function
+// $drive = function ($carName) {
+//     echo 'key<br>';
+//     echo 'engine start<br>';
+//     echo 'vision<br>';
+//     echo $carName . ' is driving<br>';
+// };
+
+
+// //lambo
+// $drive('lambo');
+// //mark2
+// $drive('mark2');
+// //townace
+// $drive('townace');
+
+
+//calculate age
+
+// input -> output
+// birthYear (2000) -> age (23)
+
+//return ???
+// function calculateAge($birthYear)
+// {
+//     //output
+//     //algorithm ???
+//     // current year - $birthYear
+//     $age = 2023 - $birthYear;
+//     return  $age; //
+// }
+
+// echo 'Your Age is ' . calculateAge(2000);
+
+// // 'Your Age is ';
+
+// echo "My age is " . calculateAge(1980);
+
+
+//include vs require
+
+// require './calculateAgasdfasfsade.php';
+
+// echo 'this line is running';
+// echo calculateAge(2003);
+
+//loop & refactor
+
+function run($name)
+{
+    echo $name . ' is running<br>';
+}
+
+
+// loop
+
+// $personal_infos = [
+//     'name' =>  'hlaing min than',
+//     'age' => 21,
+//     'is_married' => true,
+//     'accesories' => ['laptop', 'phone'],
+//     'car' => 'swift'
+// ];
+
+// foreach ($personal_infos as   $info) {
+//     print_r($info); // ???
+// }
+
+
+require './products.php';
