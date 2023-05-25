@@ -22,7 +22,7 @@ class Blog
     {
         $path = resource_path('blogs');
         $blogs = File::files($path); // [file obj, file obj ]
-        $blogs = collect($blogs);
+        $blogs = collect($blogs); //collection is array (object oriented way)
         //collections
         $blogs = $blogs
             ->map(function ($blog) {
@@ -31,16 +31,23 @@ class Blog
                 $yamlObj = YamlFrontMatter::parseFile($path);
                 return new Blog($yamlObj->id, $yamlObj->title, $yamlObj->body());
             })
-            ->sortByDesc('id');
+            ->sortByDesc('id'); //[blog obj, blog obj ] -> collection
 
         return $blogs; // collection
     }
 
-
     public static function find($id)
     {
-        dd($id);
+        $blog = static::all()->where('id', '=', $id)->first(); // null
+        return $blog;
+    }
+
+    public static function findOrFail($id)
+    {
+        $blog = static::find($id);
+        if (!$blog) {
+            abort(404);
+        }
+        return $blog;
     }
 }
-
-//new Blog()

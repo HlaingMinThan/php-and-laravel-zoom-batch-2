@@ -12,8 +12,10 @@ Route::get('/', function () {
 });
 
 Route::get('/blogs/{id}', function ($id) {
-    $blog = Blog::find($id);
-    dd($blog);
+    $blog = Blog::findOrFail($id);
+    return view('blog', [
+        'blog' => $blog
+    ]);
 });
 
 Route::get('/about', [AboutController::class, 'hello']);

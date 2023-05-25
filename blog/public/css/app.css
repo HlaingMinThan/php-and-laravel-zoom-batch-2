@@ -2,3 +2,7 @@ body {
     max-width: 600px;
     margin: auto;
 }
+    
+.bg-red {
+    background-color: red;
+}
