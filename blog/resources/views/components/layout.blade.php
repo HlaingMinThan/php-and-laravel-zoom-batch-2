@@ -11,7 +11,7 @@
         http-equiv="X-UA-Compatible"
         content="ie=edge"
     >
-    <title>Document</title>
+    {{$title}}
     <link
         rel="stylesheet"
         href="/css/app.css"

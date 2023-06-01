@@ -1,4 +1,7 @@
 <x-layout>
+    <x-slot name="title">
+        <title>Home</title>
+    </x-slot>
     @foreach($blogs as $blog)
     <h1 class="{{ $loop->odd ? 'bg-red' : '' }}">
         <a href="/blogs/{{ $blog->id }}">
@@ -6,7 +9,7 @@
         </a>
     </h1>
     <p>
-        {!! $blog->body !!}
+        {!! $blog->description !!}
     </p>
     @endforeach
 </x-layout>

@@ -1,8 +1,11 @@
 <x-layout>
+    <x-slot name="title">
+        <title>{{$blog->title}}</title>
+    </x-slot>
     <h1>
-        <?= $blog->title; ?>
+        {{$blog->title}}
     </h1>
     <p>
-        <?= $blog->body; ?>
+        {{$blog->description}}
     </p>
 </x-layout>
